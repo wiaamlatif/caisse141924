@@ -1,0 +1,137 @@
+Aller à Git Bash ouvrir en tant qu'administrateur .
+Aller dans le repertoire à exporter 
+git init
+git add .
+git commit -m "Add existing project files to Git"
+
+ Aller sur le site gitHub -> code -> https -> copier url:
+ https://github.com/wiaamlatif/caisse.git
+
+git remote add origin https://github.com/wiaamlatif/caisse.git
+git push -u -f origin master
+
+Aller sur code
+Clicker sur main
+les files importés sont visibles ...!
+
+
+
+
+
+
+git status : lecture de l'etat des fichiersgit 
+============
+Commandes Bash:
+pwd -> Chemin du Directory Courant .
+ls  -> lecture du centenu du dirctory courant
+echo "Bonjour" >> text4.txt
+less text4.txt Lecture du fichier
+q : pour quitter editeur git
+
+Php Functions :
+==============
+> date_format(date_create($row['created_at']),"d/m/Y H:i:s")
+> <?= date_format(date_create($product['created_at']),format:'d/m/y' )?>
+> $clickedNav=array_search($_SERVER['PHP_SELF'],$urlNav)
+> in_array($clickedNav,range(3,7))
+
+Php cookies:
+============
+$cookie_name = "panier";
+$cookie_value = "la perseverence fini par payer";
+
+//create a cookie:
+setcookie($cookie_name,$cookie_value); 
+
+//retreive cookie:
+$cookie_retreive=$_COOKIE[$cookie_name];
+
+//delete a cookie:
+setcookie($cookie_name,"", time() - 3600);
+
+//To  reload/refresh a current page in JavaScript
+ - Method 1 : window.location.reload();
+ - Method 2 : window.location.replace(window.location.href);
+ - Method 3 : history.go(0);
+ - Method 4 : window.location.href = window.location.href;
+              location.reload(true)
+
+// Php Array Function:
+if(in_array($produit['id_product'],array_keys($panier))){
+    $quantityItem=$panier[$produit['id_product']];
+} else {
+    $quantityItem=0;
+}
+
+<?php
+//Ajouter cookies
+/*
+if(isset($_POST['ajouter'])){
+
+    $idProduct = $_POST['idProduct']; 
+    $qty = $_POST['qtyInput']; 
+  
+    $name_cookie=$idProduct;
+    $cookie_value = $qty;
+    setcookie($name_cookie,$cookie_value,time() + (86400 * 30),'/'); 
+     //// 86400 = 1 day
+   } 
+  */
+?>
+
+//echo "<pre>=====debugDumpParams===========<br>";
+//print_r($sqlStatement -> debugDumpParams());
+//echo "</pre>";  
+
+// Methodes for Adding Leading Zeros 
+   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$number = 12345;
+$formatted_number = sprintf('%08d', $number);
+echo $formatted_number;
+
+$number = 123456;
+$padded_number = str_pad($number, 8, '0', STR_PAD_LEFT);
+echo $padded_number;
+
+$number = 1234567;
+$padded_number = str_repeat('0', 8 - strlen($number)) . $number;
+echo $padded_number;
+
+//==========
+$desired_length = 8;
+$zeros = str_repeat('0', $desired_length);
+$number = 1234567;
+$padded_number = substr($zeros . $number, -$desired_length);
+echo $padded_number;
+//==========
+
+<?php
+
+  echo lastNrTicket();
+
+  function lastNrTicket()
+  {
+    require_once 'C:/caisse191124/include/database.php';
+
+    $sql = 'SELECT * FROM tickets
+            ORDER BY id_ticket DESC LIMIT 1';
+
+    $sqlstm = $pdo -> prepare($sql);
+    $sqlstm -> execute();
+    
+    $listTickets = $sqlstm -> fetch(PDO::FETCH_ASSOC);
+
+    return $listTickets[0]['nr_ticket'];
+  }
+
+?>
+
+<a href="https://www.flaticon.com/free-icons/print" title="print icons">Print icons created by Freepik - Flaticon</a>
+
+<?php
+// echo "==================================";
+// echo "<pre>";
+// var_dump();
+// echo "</pre>";
+?>
+

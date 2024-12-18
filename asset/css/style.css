@@ -1,0 +1,27 @@
+#title{
+    text-align: center;
+}
+
+.container{
+   
+
+}
+
+.alert{
+ 
+}
+
+.testo{
+    color:red;
+}
+
+.qtyInput, .qtyInputTk{
+    width:50px;
+    color:green;
+    font-weight:bolder;
+    font-size: larger;
+    border-radius: 5px;
+    border-color: blue;
+    text-align: center;
+}
+
